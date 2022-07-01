@@ -4,6 +4,8 @@ This application helps you post and list available jobs, giving their names and 
 ## Configuration
 The application was developed by Java 11 in Spring Boot. You need to have Java 11 installed on your computer to run.
 
+IntelliJ IDEA 2021.3.3 Community Edition was used for development.
+
 ### How to run?
 Open a Command Line within "target" folder and type the following command:
 ```
