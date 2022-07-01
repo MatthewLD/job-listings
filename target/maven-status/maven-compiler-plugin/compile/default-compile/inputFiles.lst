@@ -1,0 +1,16 @@
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\entity\Client.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\entity\Position.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\controller\ClientRegistrationController.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\error\ResultMessage.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\controller\PositionRegistrationController.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\service\ClientRegistrationService.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\repository\ApiRepository.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\repository\ClientRepository.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\service\PositionSearchService.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\controller\PositionSearchController.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\entity\Api.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\config\SecurityConfig.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\JobListerApplication.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\error\ResultType.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\service\PositionRegistrationService.java
+E:\OneDrive\Programozás\job-listings\src\main\java\com\joblister\joblisterapp\repository\PositionRepository.java

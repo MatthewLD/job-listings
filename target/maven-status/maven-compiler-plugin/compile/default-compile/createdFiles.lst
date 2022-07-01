@@ -1,0 +1,16 @@
+com\joblister\joblisterapp\entity\Api.class
+com\joblister\joblisterapp\repository\ClientRepository.class
+com\joblister\joblisterapp\service\PositionRegistrationService.class
+com\joblister\joblisterapp\controller\ClientRegistrationController.class
+com\joblister\joblisterapp\error\ResultType.class
+com\joblister\joblisterapp\service\PositionSearchService.class
+com\joblister\joblisterapp\error\ResultMessage.class
+com\joblister\joblisterapp\repository\ApiRepository.class
+com\joblister\joblisterapp\service\ClientRegistrationService.class
+com\joblister\joblisterapp\JobListerApplication.class
+com\joblister\joblisterapp\repository\PositionRepository.class
+com\joblister\joblisterapp\config\SecurityConfig.class
+com\joblister\joblisterapp\controller\PositionSearchController.class
+com\joblister\joblisterapp\entity\Position.class
+com\joblister\joblisterapp\controller\PositionRegistrationController.class
+com\joblister\joblisterapp\entity\Client.class

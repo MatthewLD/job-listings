@@ -11,6 +11,8 @@ import org.springframework.stereotype.Service;
 import java.net.MalformedURLException;
 import java.util.UUID;
 
+import static com.joblister.joblisterapp.JobListerApplication.getBaseURL;
+
 @Service
 public class PositionRegistrationService {
     @Autowired
@@ -35,7 +37,7 @@ public class PositionRegistrationService {
 
             Position savedPosition = positionRepository.save(position);
 
-            return new String("/position/" + savedPosition.getId());
+            return new String(getBaseURL()+"/position/" + savedPosition.getId());
         }
     }
 

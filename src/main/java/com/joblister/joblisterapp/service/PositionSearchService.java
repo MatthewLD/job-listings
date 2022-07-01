@@ -7,10 +7,13 @@ import com.joblister.joblisterapp.repository.ApiRepository;
 import com.joblister.joblisterapp.repository.PositionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
+
+import static com.joblister.joblisterapp.JobListerApplication.getBaseURL;
 
 @Service
 public class PositionSearchService {
@@ -19,6 +22,7 @@ public class PositionSearchService {
 
     @Autowired
     ApiRepository apiRepository;
+
 
     public Object searchPosition(String keyWord, String location, String apiKey) {
         ResultMessage result = checkInputValidity(keyWord, location, apiKey);
@@ -29,7 +33,7 @@ public class PositionSearchService {
             List<Position> positions = positionRepository.searchPositionByName(keyWord, location);
             List<String> retVal = new ArrayList<>();
             for(Position position : positions){
-                retVal.add("/position/"+position.getId());
+                retVal.add(getBaseURL()+"/position/"+position.getId());
             }
             return retVal;
         }
