@@ -37,7 +37,7 @@ public class PositionRegistrationService {
 
             Position savedPosition = positionRepository.save(position);
 
-            return new String(getBaseURL()+"/position/" + savedPosition.getId());
+            return getBaseURL() + "/position/" + savedPosition.getId();
         }
     }
 

@@ -27,7 +27,8 @@ public class ClientRegistrationService {
         } else {
             UUID api;
             Api newApi;
-            boolean valid = false;
+            boolean valid;
+
             do {
                 api = UUID.randomUUID();
                 newApi = new Api();
@@ -50,14 +51,12 @@ public class ClientRegistrationService {
 
     private ResultMessage checkInputValidity(String name, String email) {
         ResultMessage nameValid = nameValid(name);
+
         if(nameValid.getType()==ResultType.OK){
             ResultMessage emailValid = eMailValid(email);
-            if(emailValid.getType()==ResultType.OK){
-                return new ResultMessage(ResultType.OK);
-            }
-            else{
-                return emailValid;
-            }
+
+            if(emailValid.getType()==ResultType.OK)  return new ResultMessage(ResultType.OK);
+            else return emailValid;
         }
         else return nameValid;
     }
@@ -69,16 +68,16 @@ public class ClientRegistrationService {
     }
 
     private ResultMessage eMailValid(String email) {
-        String regexPattern = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
+        final String regexPattern = "^(?=.{1,64}@)[A-Za-z0-9_-]+(\\.[A-Za-z0-9_-]+)*@"
                 + "[^-][A-Za-z0-9-]+(\\.[A-Za-z0-9-]+)*(\\.[A-Za-z]{2,})$";
         if (!Pattern.compile(regexPattern)
                 .matcher(email)
-                .matches()) {
+                .matches())
             return new ResultMessage(ResultType.ERROR,"This is not a valid e-mail address!");
-        }
-        if(clientRepository.findClientByEmail(email)!=null){
+
+        if(clientRepository.findClientByEmail(email)!=null)
             return new ResultMessage(ResultType.ERROR,"This e-mail address is used by another client. Please, change your e-mail address!");
-        }
+
         return new ResultMessage(ResultType.OK);
     }
 }

@@ -14,7 +14,9 @@ public class PositionSearchController {
 
     @GetMapping("/search")
     @ResponseStatus(HttpStatus.OK)
-    public Object searchPositions(@RequestParam(name = "Key word") String keyWord, @RequestParam(name = "Location") String location, @RequestParam(name = "API-key") String apiKey) {
+    public Object searchPositions(@RequestParam(name = "Key word") String keyWord,
+                                  @RequestParam(name = "Location") String location,
+                                  @RequestParam(name = "API-key") String apiKey) {
         return positionSearchService.searchPosition(keyWord, location, apiKey);
     }
 
@@ -22,5 +24,5 @@ public class PositionSearchController {
     @ResponseStatus(HttpStatus.OK)
     public Position searchPositionById(@RequestParam(name = "id")Long id) {
         return positionSearchService.findById(id);
-    };
+    }
 }

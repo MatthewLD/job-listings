@@ -32,9 +32,8 @@ public class PositionSearchService {
         else{
             List<Position> positions = positionRepository.searchPositionByName(keyWord, location);
             List<String> retVal = new ArrayList<>();
-            for(Position position : positions){
+            for(Position position : positions)
                 retVal.add(getBaseURL()+"/position/"+position.getId());
-            }
             return retVal;
         }
     }
@@ -48,9 +47,8 @@ public class PositionSearchService {
             if (nameValid.getType() == ResultType.OK) {
                 ResultMessage locationValid = locationValid(location);
 
-                if (locationValid.getType() == ResultType.OK) {
-                    return new ResultMessage(ResultType.OK);
-                } else return locationValid;
+                if (locationValid.getType() == ResultType.OK) return new ResultMessage(ResultType.OK);
+                else return locationValid;
             } else return nameValid;
         } else return apiValid;
     }

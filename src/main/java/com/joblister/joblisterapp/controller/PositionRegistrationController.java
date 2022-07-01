@@ -18,8 +18,8 @@ public class PositionRegistrationController {
     @PostMapping("/position")
     @ResponseStatus(HttpStatus.CREATED)
     public Object registerPosition(@RequestParam(value = "position name") String name,
-                                     @RequestParam(value="position location") String location,
-                                     @RequestParam(value="API-key") String apiKey) throws MalformedURLException {
-        return positionRegistrationService.registerPosition(name,location,apiKey);
+                                   @RequestParam(value="position location") String location,
+                                   @RequestParam(value="API-key") String apiKey) throws MalformedURLException {
+        return positionRegistrationService.registerPosition(name, location, apiKey);
     }
 }
