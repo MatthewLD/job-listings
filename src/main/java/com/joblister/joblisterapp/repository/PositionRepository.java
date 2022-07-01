@@ -9,14 +9,19 @@ import java.util.List;
 
 public interface PositionRepository  extends CrudRepository<Position,Long> {
     Position findPositionById(Long id);
+
     Position findPositionByClientID(Long clientID);
+
     Position findPositionByName(String name);
+
     List<Position> findAll();
-    default List<Position> searchPositionByName(String name, String location){
+
+    default List<Position> searchPositionByName(String name, String location) {
         List<Position> positionsValid = new ArrayList<>();
-        for(Position position : findAll())
-            if(StringUtils.containsIgnoreCase(position.getName(),name)&&position.getLocation().equals(location))
-                positionsValid.add(position);
+        for (Position position : findAll())
+            if (StringUtils.containsIgnoreCase(position.getName(), name))
+                if (location.equals("") || StringUtils.containsIgnoreCase(position.getLocation(), location))
+                    positionsValid.add(position);
         return positionsValid;
     }
 }

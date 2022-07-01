@@ -15,7 +15,7 @@ public class PositionSearchController {
     @GetMapping("/search")
     @ResponseStatus(HttpStatus.OK)
     public Object searchPositions(@RequestParam(name = "Key word") String keyWord,
-                                  @RequestParam(name = "Location") String location,
+                                  @RequestParam(name = "Location", required = false, defaultValue = "") String location,
                                   @RequestParam(name = "API-key") String apiKey) {
         return positionSearchService.searchPosition(keyWord, location, apiKey);
     }
